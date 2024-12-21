@@ -69,3 +69,11 @@
 # 画面遷移図
 
 ![画面遷移図](./screen_flow_diagram/screen_flow_diagram.drawio.svg)
+
+# ER図
+
+![ER図](./er/er.drawio.svg)
+
+# テーブル定義書
+
+![](./table_definitions/table_definitions.md)
