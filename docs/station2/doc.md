@@ -76,4 +76,4 @@
 
 # テーブル定義書
 
-![](./table_definitions/table_definitions.md)
+![テーブル定義書](./table_definitions/table_definitions.md)
