@@ -67,3 +67,5 @@
 [ER 図](./er/er.drawio.svg)
 
 [テーブル定義書](./table_definitions/table_definitions.md)
+
+[API 仕様書](./api_manual/api_spec.md)
