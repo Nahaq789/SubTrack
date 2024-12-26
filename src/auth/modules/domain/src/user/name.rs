@@ -15,7 +15,8 @@ pub enum NameError {
 
 impl Name {
     fn validate_name(name: &str) -> bool {
-        if name.len() > 20 {
+        println!("name.len() = {}", name.len());
+        if name.len() > 20 || name.len() < 1 {
             return false;
         }
         true
@@ -56,5 +57,14 @@ mod tests {
     fn test_display_success() {
         let result = Name::from_str("hoge").unwrap();
         assert_eq!("hoge".to_string(), result.to_string())
+    }
+
+    #[test]
+    fn test_validate_name_failed() {
+        let test_cases = vec!["", "012345678901234567891"];
+        for test_case in test_cases {
+            let result = Name::validate_name(test_case);
+            assert!(!result);
+        }
     }
 }

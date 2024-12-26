@@ -1,4 +1,4 @@
-use std::str::FromStr;
+use std::{fmt::Display, str::FromStr};
 
 use thiserror::Error;
 
@@ -41,6 +41,12 @@ impl FromStr for Password {
             }
             false => Err(PasswordError::ValidateFailed),
         }
+    }
+}
+
+impl Display for Password {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{}", &self.value)
     }
 }
 
