@@ -1,6 +1,7 @@
-use thiserror::Error;
-
+pub mod auth_user;
 pub mod user;
+
+use thiserror::Error;
 
 #[derive(Debug, Error)]
 pub enum EntityIdError {
