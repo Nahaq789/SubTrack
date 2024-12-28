@@ -1,4 +1,6 @@
 pub mod auth_user;
+pub mod repository;
+pub mod token;
 pub mod user;
 
 use thiserror::Error;
