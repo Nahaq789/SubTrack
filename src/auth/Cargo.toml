@@ -1,10 +1,11 @@
 [workspace]
 resolver = "2"
-members = [ "modules/domain","server"]
+members = [ "modules/application", "modules/domain", "modules/infrastructure","server"]
 
 [workspace.dependencies]
 aws-config = { version = "1.5.10", features = ["behavior-version-latest"] }
 aws-sdk-dynamodb = "1.53.0"
+aws-sdk-cognitoidentityprovider = "1.46.0"
 
 axum = "0.7.7"
 async-trait = "0.1.83"
@@ -20,6 +21,10 @@ rust_decimal = "1.36.0"
 chrono = { version = "0.4.38", features = ["serde"] }
 dotenv = "0.15.0"
 regex = "1.10.6"
+
+hmac = "0.12.1"
+sha2 = "0.10.6"
+base64 = "0.22.1"
 
 # test
 rstest = "0.23.0"
