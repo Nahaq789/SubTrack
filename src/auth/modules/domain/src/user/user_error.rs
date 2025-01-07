@@ -17,4 +17,13 @@ pub enum UserError {
 
     #[error("{0}")]
     UserTypeError(#[from] UserTypeError),
+
+    #[error("Failed to find by id user: {0}")]
+    FindByIdError(String),
+
+    #[error("Failed to create user: {0}")]
+    CreateUserError(String),
+
+    #[error("Failed to update user: {0}")]
+    UpdateUserError(String),
 }

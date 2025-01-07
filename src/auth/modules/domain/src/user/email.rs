@@ -23,6 +23,10 @@ impl Email {
             .map_err(|e| EmailError::RegexCompilationFailed(e.to_string()))?;
         Ok(regex.is_match(email))
     }
+
+    pub fn value(&self) -> &str {
+        &self.value
+    }
 }
 
 impl FromStr for Email {
