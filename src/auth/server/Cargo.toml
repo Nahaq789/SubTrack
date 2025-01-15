@@ -1,0 +1,18 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aws-config = { workspace = true }
+aws-sdk-dynamodb = { workspace = true }
+
+axum = { workspace = true }
+tokio = { workspace = true }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true, features = ["env-filter", "json"] }
+thiserror = { workspace = true }
+dotenv = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
